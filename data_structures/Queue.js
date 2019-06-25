@@ -41,6 +41,7 @@ class QueueLinkedList{
             return pop;
         };
     };
+
 };
 
 module.exports = {
