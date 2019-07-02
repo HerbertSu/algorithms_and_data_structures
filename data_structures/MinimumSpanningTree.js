@@ -33,7 +33,8 @@ class EdgeWeightedGraph{
     constructor(V){
         this.V = V;
         this.adj = Array(V).fill(null);
-        
+        this.edges = [];
+
         for(let i = 0; i < V; i++){
             this.adj[i] = new ListBag;
         };
@@ -43,6 +44,8 @@ class EdgeWeightedGraph{
         let v = e.either();
         let w = e.other(v);
 
+        this.edges.push(e);
+
         this.adj[v].add(e);
         this.adj[w].add(e);
     };
@@ -50,4 +53,13 @@ class EdgeWeightedGraph{
     adjacentEdge(v){
         return this.adj[v];
     };
+
+    getEdges(){
+        return this.edges;
+    };
+};
+
+module.exports = {
+    Edge,
+    EdgeWeightedGraph,
 };

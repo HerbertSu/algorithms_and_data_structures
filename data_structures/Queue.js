@@ -10,6 +10,7 @@ class QueueLinkedList{
     constructor(){
         this.earliestNode = null;
         this.mostRecentNode = null;
+        this.count = 0;
     };
 
     isEmpty(){
@@ -27,6 +28,8 @@ class QueueLinkedList{
             this.earliestNode = newNode;
             this.mostRecentNode = newNode;
         };
+
+        this.count++;
     };
 
     remove(){
@@ -38,8 +41,13 @@ class QueueLinkedList{
                 this.earliestNode = null;
                 this.mostRecentNode = null;
             };
+            this.count--;
             return pop;
         };
+    };
+
+    size(){
+        return this.count;
     };
 
 };

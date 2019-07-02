@@ -298,6 +298,16 @@ class QuickSelect{
     
 };
 
+const max = (a) => {
+    let max = 0;
+    for(let i = 0; i < a.length; i++){
+        if(a[i] > a[max]){
+            max = i;
+        };
+    };
+    return max;
+};
+
 module.exports = {
     SelectionSort,
     InsertionSort,
@@ -305,4 +315,5 @@ module.exports = {
     MergeSort,
     QuickSort,
     QuickSelect,
-}
+    max,
+};
