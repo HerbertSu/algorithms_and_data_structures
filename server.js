@@ -270,7 +270,17 @@ ewd.addEdge(de7_5);
 ewd.addEdge(de7_2);
 
 let shortestPath = new DijkstraSP(ewd, 0);
+let qsort = new QuickSort(['e','d','f', 'g']);
 
-console.log(arrayA)
-console.log(arrayA[max(arrayA)])
 
+let iminpq = new IndexMinPQ(10);
+
+iminpq.insert(0, 10);
+iminpq.insert(1, 11);
+iminpq.insert(2, 14);
+iminpq.insert(3, 9);
+iminpq.insert(5, 6);
+
+let qsort2 = new QuickSelect(arrayA);
+// qsort2.sort()
+console.log(qsort2.select(arrayA, 1))

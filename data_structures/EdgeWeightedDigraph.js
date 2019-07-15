@@ -73,7 +73,7 @@ class SPT{
         let path = new StackLinkedList;
         let e = this.edgeTo[v];
 
-        while(e != None){
+        while(e != null){
             path.insert(e);
             e = this.edgeTo[e.from()];
         };

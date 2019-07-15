@@ -42,7 +42,6 @@ class LazyPrimMST{
 
     visit(G, v){
         this.marked[v] = true;
-        console.log(G.adjacentEdge(v).arr)
         for(let e of G.adjacentEdge(v).arr){
             if(!this.marked[e.other(v)]){
                 this.pq.insert(e);

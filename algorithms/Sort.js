@@ -176,50 +176,61 @@ class QuickSort{
     };
 
     partition(array, lo, hi){
-        // let i = lo + 1;
-        // let j = hi;
-
-        // while(i < j){
-        //     for(i; i < j; i++){
-        //         if(array[i] >= array[lo]){
-        //             break;
-        //         };
-        //     };
-        //     for(j; j > i; j--){
-        //         if(array[j] <= array[lo]){
-        //             this.swap(array, i, j);
-        //             break;
-        //         };
-        //     };
-        // };
-        // j--;
-        // this.swap(array, j, lo);
-        // console.log(this.array,j);
-
-        // return j;
-
         let i = lo + 1;
         let j = hi;
-        while(true){
+
+        while(i < j){
             while(array[i] < array[lo]){
-                i += 1;
-                if(i == hi){
+                i++;
+                if(i == j){
                     break;
                 };
             };
+
             while(array[lo] < array[j]){
-                j -= 1;
-                if(j == lo){
+                j--;
+                if(j == i){
                     break;
                 };
             };
             if(i >= j){
+
+                if(array[j] > array[lo]){
+                    j--;
+                };
+
                 break;
+                
             };
             this.swap(array, i, j);
         };
-        this.swap(array, lo, j);
+        this.swap(array, j, lo);
         return j;
+
+
+
+        // let i = lo + 1;
+        // let j = hi;
+        // while(true){
+        //     while(array[i] < array[lo]){
+        //         i += 1;
+        //         if(i == hi){
+        //             break;
+        //         };
+        //     };
+        //     while(array[lo] < array[j]){
+        //         j -= 1;
+        //         if(j == lo){
+        //             break;
+        //         };
+        //     };
+        //     if(i >= j){
+        //         break;
+        //     };
+        //     this.swap(array, i, j);
+        // };
+        // this.swap(array, lo, j);
+        // return j;
     };
 
     sortRecursive(array, lo, hi){
