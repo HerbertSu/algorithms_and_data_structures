@@ -63,7 +63,16 @@ class ListQueue{
 
     isEmpty(){
         return this.q.length < 1;
-    }
+    };
+
+    contains(v){
+        for(let i = 0; i < this.q.length; i++){
+            if(this.q[i] == v){
+                return true;
+            };
+        };
+        return false;
+    };
 };
 
 

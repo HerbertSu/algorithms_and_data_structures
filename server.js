@@ -283,4 +283,4 @@ iminpq.insert(5, 6);
 
 let qsort2 = new QuickSelect(arrayA);
 // qsort2.sort()
-console.log(qsort2.select(arrayA, 1))
+// console.log(qsort2.select(arrayA, 1))
