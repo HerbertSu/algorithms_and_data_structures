@@ -186,6 +186,17 @@ class MinPQEdgeGraph{
     };
 };
 
+let npq = new MinPQ([null]);
+npq.insert(7)
+npq.insert(9)
+npq.insert(4)
+npq.insert(8)
+npq.insert(5)
+
+console.log(npq.a)
+console.log(npq.delMin())
+console.log(npq.a)
+
 
 module.exports = {
     MinPQ,
