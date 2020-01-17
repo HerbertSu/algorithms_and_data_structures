@@ -1,7 +1,7 @@
 class QuickUnion{
     constructor(N){
-        this.uf = Array(N).fill(null);
         this.N = N;
+        this.uf = Array(N).fill(null);
 
         for(let i = 0; i < N; i++){
             this.uf[i] = i;
@@ -16,10 +16,14 @@ class QuickUnion{
     };
 
     union(p, q){
+        if(this.root(p) == this.root(q)){
+            return;
+        };
+
         this.uf[this.root(p)] = this.root(q);
     };
 
-    connected(p, q){
+    find(p, q){
         return this.root(p) == this.root(q);
     };
 };
